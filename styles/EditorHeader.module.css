@@ -1,0 +1,50 @@
+.row {
+  background-color: black;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+  padding: 0 100px 0 100px;
+  z-index: 1;
+}
+.row button {
+  height: 40px;
+  width: 100px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #444857;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 18px;
+}
+.row > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row svg {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  z-index: 10;
+  fill: #fff;
+  margin: 0 30px;
+}
+.center {
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center svg {
+  width: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.center svg:hover {
+  fill: rgb(60, 57, 57);
+}

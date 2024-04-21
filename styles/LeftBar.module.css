@@ -1,0 +1,69 @@
+.container {
+  width: 300px;
+  height: 100vh;
+  background-color: hsl(232.5deg 11.76% 13.33%);
+  float: left;
+}
+.container svg {
+  width: 200px;
+  margin: 10px auto;
+  display: block;
+  position: relative;
+}
+.tryonlineeditor {
+  font-size: 10px;
+  text-align: left;
+  font-weight: bolder;
+  width: 150px;
+  margin-left: 50px;
+  color: hsl(226.67deg 11.84% 70.2%);
+}
+.startCoding {
+  width: 200px;
+  height: 50px;
+  margin: auto;
+  background: linear-gradient(to right, #00ffa3, #dc1fff);
+  color: "#fff";
+  margin: 20px 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+.startCoding::before {
+  content: "Start Coding";
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16 px;
+  top: 1px;
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  background-color: black;
+  border-radius: 4px;
+}
+.item {
+  font-size: 18px;
+  font-weight: bold;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: hsl(226.67deg 11.84% 70.2%);
+}
+.item:hover {
+  background: rgb(18, 18, 18);
+}
+@media (max-width: 600px) {
+  .container {
+    display: none;
+  }
+}
