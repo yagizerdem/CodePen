@@ -3,6 +3,9 @@
   height: 100px;
   background-color: hsl(0deg 0% 0%);
   float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .search {
   width: 300px;
@@ -21,12 +24,43 @@
 .container svg {
   width: 20px;
   fill: white;
-  position: relative;
+  position: absolute;
   left: 50px;
-  top: 5px;
+  top: 35px;
+}
+.searchcontainer {
+  position: relative;
+  height: fit-content;
 }
 .search:focus {
   background-color: rgb(78, 76, 76);
+}
+.btnslogin {
+  padding: 10px;
+  width: 100px;
+  margin: 0px 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  background: hsl(223.64deg 12.94% 16.67%);
+}
+.btnslogin:hover {
+  background: hsl(139.41deg 58.62% 54.51%);
+  color: white;
+}
+.btnssingUp {
+  padding: 10px;
+  width: 100px;
+  margin: 0px 30px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bolder;
+  background: hsl(223.64deg 12.94% 16.67%);
+  color: white;
 }
 @media (max-width: 600px) {
   .container {

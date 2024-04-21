@@ -3,10 +3,6 @@ import styles from "../styles/LeftBar.module.css";
 export default function LeftBar() {
   const router = useRouter();
 
-  function clickHandler() {
-    router.push("pen");
-  }
-
   return (
     <div className={styles.container}>
       <svg
@@ -22,10 +18,13 @@ export default function LeftBar() {
       </svg>
       <br></br>
       <h3 className={styles.tryonlineeditor}>TRY OUR ONLINE EDITOR</h3>
-      <button className={styles.startCoding} onClick={clickHandler}>
+      <button className={styles.startCoding} onClick={() => router.push("pen")}>
         Start Coding
       </button>
       <ul>
+        <li className={styles.item} onClick={() => router.push("/")}>
+          Home
+        </li>
         <li className={styles.item}>Search pens</li>
         <li className={styles.item}>Challenges</li>
         <li className={styles.item}>Spark</li>

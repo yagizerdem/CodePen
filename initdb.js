@@ -34,7 +34,7 @@ function createTestDatabase() {
         lastname TEXT NOT NULL,
         password TEXT NOT NULL,
         passwordagain TEXT NOT NULL,
-        email TEXT NOT NULL,   
+        email TEXT NOT NULL UNIQUE,   
         role TEXT NOT NULL
     )
  `
@@ -65,7 +65,7 @@ function createProductionDatabase() {
         lastname TEXT NOT NULL,
         password TEXT NOT NULL,
         passwordagain TEXT NOT NULL,
-        email TEXT NOT NULL,   
+        email TEXT NOT NULL UNIQUE,   
         role TEXT NOT NULL
     )
  `

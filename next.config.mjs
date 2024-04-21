@@ -1,6 +1,20 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+import {
+  PHASE_DEVELOPMENT_SERVER,
+  PHASE_PRODUCTION_SERVER,
+} from "next/constants.js";
 
-export default nextConfig;
+export default (phase, { defaultConfig }) => {
+  if (phase === PHASE_DEVELOPMENT_SERVER) {
+    return {
+      env: {
+        DBNAME: "testdatabase.db",
+      },
+    };
+  }
+
+  return {
+    env: {
+      DBNAME: "testdatabase.db",
+    },
+  };
+};

@@ -1,0 +1,44 @@
+.container {
+  width: 100%;
+  height: fit-content;
+  padding: 50px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.formgroup {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.formgroup > label {
+  margin: 10px 0;
+}
+.formgroup > input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: hsl(227.37deg 12.26% 30.39%);
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.submtibtn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  display: block;
+  margin: auto;
+  width: 150px;
+  background-color: hsl(227.37deg 12.26% 30.39%);
+  cursor: pointer;
+}
+.submtibtn:hover {
+  background-color: hsl(228, 7%, 39%);
+}

@@ -6,7 +6,7 @@ import styles from "@/styles/Home.module.css";
 export default function Home() {
   return (
     <>
-      <HomeLayout children={<div>sjlajf</div>}></HomeLayout>
+      <HomeLayout></HomeLayout>
     </>
   );
 }
