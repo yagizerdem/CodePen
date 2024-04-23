@@ -7,7 +7,7 @@ const productionDb = new Database("productiondatabase.db", {
 function init() {
   // crate table schema
   createTestDatabase();
-  // createProductionDatabase();
+  createProductionDatabase();
 }
 
 function createTestDatabase() {
@@ -51,7 +51,7 @@ function createProductionDatabase() {
         summary TEXT NOT NULL,
         htmlcode TEXT NOT NULL,
         csscode TEXT NOT NULL,
-        jscode TEXT NOT NULL
+        jscode TEXT NOT NULL,
         likes INTEGER NOT NULL
     )`
     )
