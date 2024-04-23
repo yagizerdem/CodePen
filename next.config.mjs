@@ -8,7 +8,7 @@ export default (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
       env: {
-        DBNAME: "developmentdatabase.db",
+        DBNAME: "testdatabase.db",
         AUTH_SECRET: crypto.randomBytes(32).toString("hex"),
       },
     };
