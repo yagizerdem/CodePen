@@ -8,6 +8,10 @@ export default function Nav() {
   const { data: session } = useSession();
   const router = useRouter();
 
+  function goToProfile() {
+    router.push("/Profile");
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.searchcontainer}>
@@ -39,7 +43,20 @@ export default function Nav() {
         )}
         {session && (
           <Fragment>
-            <div>profile</div>
+            <div
+              style={{
+                display: "inline",
+                color: "white",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+              onClick={goToProfile}
+            >
+              {session.userData.firstname + "-" + session.userData.lastname}
+            </div>
+            <button className={styles.btnssingUp} onClick={() => signOut()}>
+              logOut
+            </button>
           </Fragment>
         )}
       </div>

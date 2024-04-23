@@ -1,0 +1,31 @@
+.container {
+  padding-top: 50px;
+}
+.container > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container > form > input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  margin-bottom: 40px;
+}
+.container > form > label {
+  font-size: 20px;
+  color: #fff;
+  margin: 10px 0;
+}
+.container > form > button {
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bolder;
+}

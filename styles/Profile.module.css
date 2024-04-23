@@ -1,0 +1,74 @@
+.header {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #fff;
+  margin: 20px 0;
+}
+.grid {
+  width: 100%;
+  height: fit-content;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.listitem {
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: #2c2a2a;
+  border-radius: 10px;
+}
+.listitemtitle {
+  text-align: center;
+  font-weight: bolder;
+  color: #d3cccc;
+  font-size: 20px;
+}
+.listitemtitle ~ hr {
+  width: 80%;
+  margin: 10px auto;
+}
+.summary {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 500;
+  color: #d3cccc;
+  margin-top: 10px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row > button {
+  width: 100px;
+  height: 50px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.textarea {
+  display: block;
+  height: 150px;
+}
+.summaryform {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: auto;
+}
+.summary {
+  overflow-wrap: break-word;
+  height: 200px;
+  overflow-y: scroll;
+}

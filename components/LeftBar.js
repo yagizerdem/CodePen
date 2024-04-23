@@ -25,8 +25,12 @@ export default function LeftBar() {
         <li className={styles.item} onClick={() => router.push("/")}>
           Home
         </li>
-        <li className={styles.item}>Search pens</li>
-        <li className={styles.item}>Challenges</li>
+        <li className={styles.item} onClick={() => router.push("searchPens")}>
+          Search pens
+        </li>
+        <li className={styles.item} onClick={() => router.push("challenges")}>
+          Challenges
+        </li>
         <li className={styles.item}>Spark</li>
       </ul>
     </div>

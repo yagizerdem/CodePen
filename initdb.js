@@ -7,7 +7,7 @@ const productionDb = new Database("productiondatabase.db", {
 function init() {
   // crate table schema
   createTestDatabase();
-  createProductionDatabase();
+  // createProductionDatabase();
 }
 
 function createTestDatabase() {
@@ -16,13 +16,14 @@ function createTestDatabase() {
       `
     CREATE TABLE IF NOT EXISTS pens (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        authorid INTEGER NOT NULL,
         title TEXT NOT NULL ,
         summary TEXT NOT NULL,
         htmlcode TEXT NOT NULL,
         csscode TEXT NOT NULL,
-        jscode TEXT NOT NULL
-    )
- `
+        jscode TEXT NOT NULL,
+        likes INTEGER NOT NULL
+      )`
     )
     .run();
   testDb
@@ -33,11 +34,9 @@ function createTestDatabase() {
         firstname TEXT NOT NULL,
         lastname TEXT NOT NULL,
         password TEXT NOT NULL,
-        passwordagain TEXT NOT NULL,
         email TEXT NOT NULL UNIQUE,   
         role TEXT NOT NULL
-    )
- `
+    )`
     )
     .run();
 }
@@ -47,13 +46,14 @@ function createProductionDatabase() {
       `
     CREATE TABLE IF NOT EXISTS pens (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        authorid INTEGER NOT NULL,
         title TEXT NOT NULL ,
         summary TEXT NOT NULL,
         htmlcode TEXT NOT NULL,
         csscode TEXT NOT NULL,
         jscode TEXT NOT NULL
-    )
- `
+        likes INTEGER NOT NULL
+    )`
     )
     .run();
   productionDb
@@ -64,11 +64,9 @@ function createProductionDatabase() {
         firstname TEXT NOT NULL,
         lastname TEXT NOT NULL,
         password TEXT NOT NULL,
-        passwordagain TEXT NOT NULL,
         email TEXT NOT NULL UNIQUE,   
         role TEXT NOT NULL
-    )
- `
+    )`
     )
     .run();
 }

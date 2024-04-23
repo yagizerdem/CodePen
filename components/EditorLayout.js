@@ -4,8 +4,10 @@ import SplitPane, { Pane } from "split-pane-react";
 import "split-pane-react/esm/themes/default.css";
 import { CssEditor, HtmlEditor, JavascriptEditor } from "./Editors";
 import { useDebounce } from "@/hooks/useDebounce";
+import { useAppContext } from "@/Context/AppContext";
 
 export default function EditorLayout() {
+  const { html, css, js, setHtml, setCss, setJs } = useAppContext();
   const [sizesVertical, setSizesVertical] = useState(["auto", "auto", "auto"]);
   const [sizeHorizontal, setSizesHorizontal] = useState(["50%", "50%"]);
   const layoutCSS = {
@@ -15,14 +17,11 @@ export default function EditorLayout() {
     justifyContent: "center",
   };
 
-  const [htmlValue, setHtmlValue] = useState("");
-  const [jsValue, setJsValue] = useState("");
-  const [cssValue, setCssValue] = useState("");
   const [outputValue, setOutputValue] = useState("");
 
-  const debouncedHtml = useDebounce(htmlValue, 1000);
-  const debouncedJs = useDebounce(jsValue, 1000);
-  const debouncedCss = useDebounce(cssValue, 1000);
+  const debouncedHtml = useDebounce(html, 1000);
+  const debouncedJs = useDebounce(js, 1000);
+  const debouncedCss = useDebounce(css, 1000);
   useEffect(() => {
     const output = `<html>
                     <style>
@@ -44,7 +43,7 @@ export default function EditorLayout() {
         split="horizontal"
         sizes={sizeHorizontal}
         onChange={setSizesHorizontal}
-        resizerSize={20}
+        resizerSize={10}
       >
         <SplitPane
           split="vertical"
@@ -60,10 +59,7 @@ export default function EditorLayout() {
                 margin: "0 5px 0 0",
               }}
             >
-              <HtmlEditor
-                value={htmlValue}
-                onChange={setHtmlValue}
-              ></HtmlEditor>
+              <HtmlEditor value={html} onChange={setHtml}></HtmlEditor>
             </div>
           </Pane>
           <div
@@ -73,13 +69,10 @@ export default function EditorLayout() {
               margin: "0 5px 0 0",
             }}
           >
-            <CssEditor value={cssValue} onChange={setCssValue}></CssEditor>
+            <CssEditor value={css} onChange={setCss}></CssEditor>
           </div>
           <div style={{ ...layoutCSS, background: "hsl(228deg 7.94% 12.35%)" }}>
-            <JavascriptEditor
-              value={jsValue}
-              onChange={setJsValue}
-            ></JavascriptEditor>
+            <JavascriptEditor value={js} onChange={setJs}></JavascriptEditor>
           </div>
         </SplitPane>
         <div className={styles.iframecontainer}>

@@ -48,3 +48,15 @@
 .center svg:hover {
   fill: rgb(60, 57, 57);
 }
+.nameInput {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border: 5px;
+  background-color: hsl(225, 2%, 39%);
+  color: #fff;
+}
+.nameInput:focus {
+  border: none;
+  outline: none;
+}

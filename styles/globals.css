@@ -3,3 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* For WebKit-based browsers (Chrome, Safari) */
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: black; /* Color of the thumb */
+}
+
+/* For Firefox */
+/* Style the scrollbar track */
+::-moz-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-moz-scrollbar-thumb {
+  background-color: black; /* Color of the thumb */
+}
+
+/* For Edge */
+/* Style the scrollbar track */
+::-ms-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar thumb */
+::-ms-scrollbar-thumb {
+  background-color: black; /* Color of the thumb */
+}

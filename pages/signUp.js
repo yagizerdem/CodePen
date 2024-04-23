@@ -4,12 +4,13 @@ import { ValidateSingUp } from "@/lib/FormValidator";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
 import { useRef } from "react";
+import axios from "axios";
 
 export default function SingUp() {
   const notify = (msg) => toast(msg);
   const router = useRouter();
   const ref = useRef();
-  function submitHandler(e) {
+  async function submitHandler(e) {
     e.preventDefault();
     const formData = new FormData(ref.current);
     const obj = {};
@@ -23,8 +24,15 @@ export default function SingUp() {
       return;
     }
     //
-
-    // router.push("/");
+    result = await axios.post("/api/signUp", obj);
+    // register failded
+    if (result.data.status == "invalid") {
+      notify(result.data.message);
+      return;
+    }
+    // register success
+    notify("sing up successfull ... ");
+    router.push("/");
   }
 
   return (
